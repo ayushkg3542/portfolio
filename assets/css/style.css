@@ -589,7 +589,7 @@ header .logo {
 /* Section 6 Starts */
 
 .connect-section {
-    height: 60vh;
+    /* height: 60vh; */
     margin: 100px 0;
 }
 
@@ -797,5 +797,13 @@ header .logo {
 
     .button-group ul {
         gap: .7rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    header{
+        justify-content: space-between;
     }
 }
