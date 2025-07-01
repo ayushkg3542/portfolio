@@ -1,0 +1,801 @@
+@import url(../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+header .logo {
+    font-size: 1.46rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+#menu .nav-link {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+#menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+#menu .nav-link:hover::after {
+    width: 100%;
+}
+
+.contact-btn {
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: .9rem 1.8rem;
+    background: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* box-shadow: 0 0 1px 1px black; */
+    transition: .2ms ease-in;
+}
+
+.contact-btn:hover {
+    background: black;
+    transition: .2s ease-out;
+    box-shadow: 0 0 1px 2px black;
+    color: white;
+}
+
+.banner-section {
+    /* height: 110vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 3rem 0;
+}
+
+.scrolling-text {
+    position: absolute;
+    top: 40%;
+    /* Adjust as needed */
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+.scrolling-text-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+}
+
+.scrolling-text-content span {
+    font-size: 10rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.banner-section .container {
+    z-index: 1;
+    position: relative;
+}
+
+.banner-section .container .mail-text {
+    background-color: #000;
+    border-radius: 30px;
+    padding: .645rem 2rem;
+}
+
+.main-context {
+    width: 650px;
+}
+
+.my_name {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    /* margin-bottom: 10px; */
+}
+
+.my_name h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.hand_img {
+    height: 3.8rem;
+}
+
+.ayush_img {
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    background-color: #ffffff26;
+    height: 30rem;
+    width: auto;
+}
+
+.ayush_img img {
+    height: 100%;
+    /* width: auto; */
+    border-radius: 10px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    width: 29rem;
+    margin: 0 6rem;
+    margin-bottom: 0px;
+    margin-bottom: 4rem;
+    font-size: 14px;
+}
+
+.description a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.arrow-direction {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2.5rem;
+    border: 1px solid #000;
+    padding: 1.5rem;
+    border-radius: 100%;
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #000;
+}
+
+.arrow-direction i {
+    font-size: 24px;
+}
+
+.arrow-direction:hover {
+    background: #000;
+    color: #fff;
+    /* transition: 0.3s ease-in-out; */
+}
+
+/* Section Banner ends */
+
+
+/* Section About Starts */
+.about-section {
+    margin-top: 60px;
+}
+
+.about-title {
+    position: relative;
+}
+
+
+.about-title h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    letter-spacing: -5px;
+}
+
+.about-title span {
+    width: 10rem;
+    background-color: #000;
+    border: 1px solid;
+    display: flex;
+    position: absolute;
+    bottom: 6px;
+}
+
+.about-text p {
+    font-size: 20px;
+    color: #c4c4c4c4;
+    transition: color 0.3s ease;
+}
+
+
+.robot-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    border-radius: 20px;
+    height: 34rem;
+}
+
+.robot-image img {
+    width: auto;
+    height: 100%;
+    /* filter: drop-shadow(20px 5px 4px #ffffff); */
+}
+
+.circle-text-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rotating-circle {
+    width: 100%;
+    height: 100%;
+    animation: rotateText 10s linear infinite;
+    transform-origin: center center;
+    display: block;
+}
+
+.center-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+    z-index: 10;
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Section About Ends */
+
+
+/* Section 3 Start */
+
+.slideshow {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.carousel-overlay {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.carousel.slide,
+.carousel-inner {
+    border-radius: 30px;
+}
+
+.carousel-overlay img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px;
+}
+
+.carousel-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(61, 61, 61, 0.4);
+    pointer-events: none;
+}
+
+.carousel .carousel-control-prev {
+    border: 1px solid #fff;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    left: 77%;
+    top: 80%;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+
+}
+
+.carousel .carousel-control-next {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    left: 85%;
+    top: 80%;
+    border: 1px solid #fff;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 3rem;
+}
+
+.carousel-text .h1 {
+    font-size: 10rem;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+}
+
+.carousel-text .h5 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+
+/* Section 3 End */
+
+/* Section 4 Start */
+.service-section {
+    margin-bottom: 100px;
+}
+
+.service-title {
+    position: relative;
+}
+
+.service-title h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    letter-spacing: -8px;
+}
+
+.service-title span {
+    width: 10rem;
+    background-color: #000;
+    border: 1px solid;
+    display: flex;
+    position: absolute;
+    bottom: 6px;
+}
+
+.services {
+    position: relative;
+}
+
+.services h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.services i {
+    font-size: 1.5rem;
+}
+
+.services .row {
+    border-bottom: 1px solid rgb(167, 167, 167);
+    padding: 20px 0;
+    position: relative;
+    color: #000;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.services .row .center14 {
+    height: 0%;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.5s;
+    z-index: 0;
+}
+
+.services .row:hover .center14 {
+    height: 100%;
+}
+
+.services .row>* {
+    position: relative;
+    z-index: 1;
+}
+
+.services .row:hover {
+    color: #fff;
+}
+
+/* Section 4 End */
+
+/* Section 5 Start */
+
+.project-title {
+    position: relative;
+}
+
+.project-title h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    letter-spacing: -5px;
+}
+
+.project-title span {
+    width: 10rem;
+    background-color: #000;
+    border: 1px solid;
+    display: flex;
+    position: absolute;
+    bottom: 6px;
+}
+
+.project-image {
+    background-color: #000;
+    color: #fff;
+}
+
+.project-image .img {
+    overflow: hidden;
+}
+
+.project-image img {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
+}
+
+
+.project-image h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-image .project-text i {
+    font-size: 1.2rem;
+    border-radius: 1px solid #fff;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.project-image .project-text i:hover {
+    background-color: white;
+    color: #000;
+}
+
+.project-image .button {
+    display: flex;
+    justify-content: center;
+}
+
+.project-image .button a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 14rem;
+    height: 14rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-transform: uppercase;
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image .button a .default-icon,
+.project-image .button a .hover-icon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    right: 25px;
+}
+
+.project-image .button a .default-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project-image .button a .hover-icon {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.project-image .button a:hover .default-icon {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.project-image .button a:hover .hover-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project-image .button a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Section 5 End */
+
+
+/* Section 6 Starts */
+
+.connect-section {
+    height: 70vh;
+    margin: 100px 0;
+}
+
+.connect-title h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    letter-spacing: -5px;
+}
+
+
+.connect-title h5 {
+    color: #000;
+}
+
+.connect-title h5 a {
+    color: #000;
+}
+
+.button-group h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.button-group ul {
+    display: flex;
+    gap: 1.3rem;
+    margin: 2rem 0;
+    padding-left: 0;
+}
+
+.button-group ul li {
+    list-style: none;
+}
+
+.button-group ul li a {
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    color: #000;
+}
+
+/* Section 6 Ends */
+
+
+@media (max-width:1400px) {}
+
+@media (max-width:1200px) {
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .carousel-text .h1 {
+        font-size: 9rem;
+    }
+
+    .carousel .carousel-control-next {
+        left: 84%;
+    }
+
+    .carousel .carousel-control-prev {
+        left: 73%;
+    }
+}
+
+@media (max-width:992px) {
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .carousel-text .h1 {
+        font-size: 8rem;
+    }
+
+    .carousel .carousel-control-next {
+        left: 84%;
+        top: 3%;
+    }
+
+    .carousel .carousel-control-prev {
+        left: 70%;
+        top: 3%;
+    }
+}
+
+@media (max-width:768px) {
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .carousel-text .h1 {
+        font-size: 7rem;
+    }
+
+    .carousel .carousel-control-next {
+        left: 78%;
+        top: 3%;
+    }
+
+    .carousel .carousel-control-prev {
+        left: 58%;
+        top: 3%;
+    }
+
+    .arrow-direction {
+        position: inherit;
+        margin: 0.5rem;
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .main-context {
+        width: 525px;
+    }
+
+    .description {
+        margin: 0 3rem;
+        margin-bottom: 4rem;
+        width: 26rem;
+    }
+}
+
+
+@media (max-width:576px) {
+    .my_name h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-context h5 {
+        font-size: 1.1rem;
+    }
+
+    .main-context {
+        width: 372px;
+    }
+
+    .scrolling-text {
+        top: 32%;
+    }
+
+    .ayush_img {
+        padding: 12px;
+        height: 20rem;
+    }
+
+    .description {
+        width: auto;
+        margin: 12px 0rem;
+        align-items: center;
+    }
+
+    .description p {
+        margin-bottom: 0;
+
+    }
+
+    .arrow-direction {
+        position: inherit;
+    }
+
+    .scrolling-text-content span {
+        font-size: 8rem;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-title h1 {
+        font-size: 4.5rem;
+    }
+
+    .service-title h1 {
+        font-size: 4.5rem;
+    }
+
+    .project-title h1 {
+        font-size: 4.5rem;
+    }
+
+    .connect-title h1 {
+        font-size: 4.5rem;
+    }
+
+    .carousel-text .h1 {
+        font-size: 5rem;
+    }
+
+    .carousel .carousel-control-next {
+        left: 78%;
+        top: 3%;
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .carousel .carousel-control-prev {
+        height: 3.5rem;
+        width: 3.5rem;
+        left: 60%;
+        top: 3%;
+    }
+
+    .button-group ul {
+        gap: .7rem;
+    }
+}
