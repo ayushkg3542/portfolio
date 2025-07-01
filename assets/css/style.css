@@ -713,6 +713,9 @@ header .logo {
         margin-bottom: 4rem;
         width: 26rem;
     }
+    header{
+        justify-content: space-between;
+    }
 }
 
 
