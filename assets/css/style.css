@@ -46,6 +46,8 @@ header .logo {
     text-transform: uppercase;
     /* box-shadow: 0 0 1px 1px black; */
     transition: .2ms ease-in;
+    color: #000;
+    text-decoration: none;
 }
 
 .contact-btn:hover {
