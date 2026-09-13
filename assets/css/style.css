@@ -637,7 +637,232 @@ header .logo {
     color: #000;
 }
 
+
+.direction_button{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.direction_button:hover{
+    background: #000;
+    color: #fff;
+    transition: .2s ease-out;
+}
+
 /* Section 6 Ends */
+
+/* Works Page Start */
+
+.works-hero {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/carousel-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.works-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 12, 32, 0.35);
+}
+
+.works-hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: -6px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.works-list {
+    width: 100%;
+}
+
+.works-row {
+    min-height: 520px;
+}
+
+.works-image {
+    height: 100%;
+    min-height: 520px;
+    overflow: hidden;
+    background: #000;
+}
+
+.works-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.works-row:hover .works-image img {
+    transform: scale(1.05);
+}
+
+.works-content {
+    height: 100%;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.5rem 5rem;
+    background: #f4f4f4;
+}
+
+.works-row:nth-child(even) .works-content {
+    background: #0d0d0d;
+    color: #fff;
+}
+
+.works-index {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 1rem;
+}
+
+.works-content h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 1.25rem;
+}
+
+.works-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 36rem;
+    margin-bottom: 1.75rem;
+}
+
+.works-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.works-tags li {
+    list-style: none;
+    border: 1px solid currentColor;
+    border-radius: 30px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.works-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: fit-content;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid currentColor;
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.works-row:nth-child(odd) .works-link:hover {
+    background: #000;
+    color: #fff;
+}
+
+.works-row:nth-child(even) .works-link:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Works Page End */
+
+/* Landing Pages Gallery Start */
+
+.lp-gallery {
+    width: 100%;
+}
+
+.lp-card {
+    background: #0d0d0d;
+    color: #fff;
+    height: 100%;
+}
+
+.lp-preview {
+    height: 70vh;
+    min-height: 480px;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+}
+
+.lp-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(0);
+    transition: transform 8s linear;
+    will-change: transform;
+}
+
+.lp-preview:hover img {
+    transform: translateY(var(--shift, 0px));
+}
+
+.lp-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lp-card-meta h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.lp-card-meta span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.column-left{
+    border-right: 2px solid rgb(3, 3, 3);
+}
+.column-right{
+    border-left: 2px solid rgba(3, 3, 3);
+}
+
+/* Landing Pages Gallery End */
 
 
 @media (max-width:1400px) {}
@@ -722,6 +947,32 @@ header .logo {
 
     header {
         justify-content: space-between;
+    }
+
+    .works-hero h1 {
+        font-size: 4.5rem;
+        letter-spacing: -3px;
+    }
+
+    .works-content {
+        padding: 3rem 2rem;
+        min-height: auto;
+    }
+
+    .works-image,
+    .works-image img {
+        min-height: 320px;
+    }
+
+    .lp-preview {
+        height: 55vh;
+        min-height: 360px;
+    }
+
+    .lp-card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
     }
 }
 
@@ -815,5 +1066,28 @@ header .logo {
 
     header {
         justify-content: space-between;
+    }
+
+    .works-hero {
+        min-height: 50vh;
+    }
+
+    .works-hero h1 {
+        font-size: 3rem;
+        letter-spacing: -2px;
+        padding: 0 1rem;
+    }
+
+    .works-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .works-content {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .lp-preview {
+        height: 48vh;
+        min-height: 300px;
     }
 }

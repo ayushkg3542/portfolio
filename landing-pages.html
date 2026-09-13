@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Landing Pages | Dev.Ayush</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-md-between py-3 border-bottom">
+                <a href="index.html"
+                    class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">
+                    <span>
+                        <_>
+                    </span>&nbsp;Dev.Ayush
+                </a>
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="menu">
+                    <li><a href="index.html" class="nav-link px-3 link-dark">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link px-3 link-dark">About</a></li>
+                    <li><a href="works.html" class="nav-link px-3 link-dark">Projects</a></li>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <a href="tel:6200060278" type="button" class="contact-btn">Contact</a>
+                </div>
+            </header>
+        </div>
+
+        <section class="works-hero">
+            <div class="works-hero-overlay"></div>
+            <h1>LANDING PAGES</h1>
+        </section>
+
+        <section class="lp-gallery">
+            <div class="row g-0">
+                <div class="col-md-6 column-left">
+                    <article class="lp-card">
+                        <div class="lp-preview">
+                            <img src="./assets/img/ss-1.png" alt="Bali Experience Hub">
+                        </div>
+                        <div class="lp-card-meta">
+                            <h3>Landing Page</h3>
+                            <span>01</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 column-right">
+                    <article class="lp-card">
+                        <div class="lp-preview">
+                            <img src="./assets/img/ss-2.png" alt="Couple Escape Landing Page">
+                        </div>
+                        <div class="lp-card-meta">
+                            <h3>Landing Page</h3>
+                            <span>02</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 column-left">
+                    <article class="lp-card">
+                        <div class="lp-preview">
+                            <img src="./assets/img/ss-3.png" alt="Family Escape Landing Page">
+                        </div>
+                        <div class="lp-card-meta">
+                            <h3>Landing Page</h3>
+                            <span>03</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 column-right">
+                    <article class="lp-card">
+                        <div class="lp-preview">
+                            <img src="./assets/img/ss-4.png" alt="Bali Experience Hub Landing Page">
+                                alt="Bali Sept Oct Offer Landing Page">
+                        </div>
+                        <div class="lp-card-meta">
+                            <h3>Landing Page</h3>
+                            <span>04</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="connect-section">
+            <div class="container">
+                <div class="connect-title mb-5">
+                    <h1>Let's Connect!</h1>
+                    <h5>Send me a <a href="mailto:akgoswami086@gmail.com">message</a> or connect on <a
+                            href="https://www.linkedin.com/in/ayush-goswami-479776210" target="_blank">LinkedIn</a>, and
+                        let’s discuss how I can help you.</h5>
+                </div>
+                <hr>
+                <div class="button-group mt-5">
+                    <h5>find me @</h5>
+                    <ul>
+                        <li><a href="mailto:akgoswami086@gmail.com" target="_blank">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/ayush-goswami-479776210" target="_blank">LinkedIn</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/ayushkumar6303/" target="_blank">Instagram</a></li>
+                        <li><a href="https://github.com/ayushkg3542" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script>
+    function prepareLpPreviews() {
+        document.querySelectorAll(".lp-preview").forEach(function (frame) {
+            var img = frame.querySelector("img");
+            if (!img) return;
+
+            var setShift = function () {
+                var extra = img.scrollHeight - frame.clientHeight;
+                img.style.setProperty("--shift", extra > 0 ? "-" + extra + "px" : "0px");
+                img.style.transitionDuration = Math.max(6, extra / 90) + "s";
+            };
+
+            if (img.complete) {
+                setShift();
+            } else {
+                img.addEventListener("load", setShift);
+            }
+        });
+    }
+
+    window.addEventListener("load", prepareLpPreviews);
+    window.addEventListener("resize", prepareLpPreviews);
+</script>
+
+</html>
